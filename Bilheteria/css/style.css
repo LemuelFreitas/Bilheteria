@@ -267,30 +267,65 @@ img {
 
 /* Qualidade Section */
 .qualidade {
-    max-width: 960px;
+    max-width: 1000px;
     margin: 60px auto;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
+
 .qualidade-item {
-    flex: 1 1 calc(30% - 20px);
+    flex: 1 1 300px;
+    margin: 20px 10px;
     background: #f7f7f7;
-    border: 1px solid #C00224;
+    border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    text-align: center;
+    text-align: left;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .qualidade-item h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #4a4a4a;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 20px;
 }
+
+.qualidade-item h2::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    margin-right: 10px;
+    background: #ae81ff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(50%);
+}
+
+.qualidade-item:nth-of-type(3n+1) h2::before {
+    background: #ECC223;
+}
+
+.qualidade-item:nth-of-type(3n+2) h2::before {
+    background: #d98e04;
+}
+
+.qualidade-item:nth-of-type(3n+3) h2::before {
+    background: #C00225;
+}
+
 .qualidade-item p {
     font-size: 1em;
+    line-height: 1.4;
     color: #7c7c7c;
+    margin-top: 10px;
 }
+
 
 /* Newsletter Section */
 .newsletter {
